@@ -38,7 +38,4 @@ class Netbook extends Product {
 
 }
 
-// istanze netbook
-$msiPrestige = new Netbook(1300, "MSI Prestige 15", 15, "32GB", "Windows-10", "Intel i7");
-$hpPavillon = new Netbook(800, "HP Pavillon", 16, "8GB", "Windows-10", "Intel i5");
 ?>

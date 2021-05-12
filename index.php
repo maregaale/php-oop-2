@@ -1,5 +1,15 @@
 <?php
 
+// includo classe netbook
+include_once __DIR__ . '/classes/netbook.class.php';
+
+// includo classe ruote
+include_once __DIR__ . '/classes/wheel.class.php';
+
+// includo classe biciclette
+include_once __DIR__ . '/classes/bicycle.class.php';
+
+
 // classe prodotto
 class Product {
   // proprietà
@@ -23,11 +33,19 @@ class Product {
 
 }
 
-// includo classe netbook
-include_once __DIR__ . '/classes/netbook.class.php';
+// ISTANZE
+// istanze netbook
+$msiPrestige = new Netbook(1300, "MSI Prestige 15", 15, "32GB", "Windows-10", "Intel i7");
+$hpPavillon = new Netbook(800, "HP Pavillon", 16, "8GB", "Windows-10", "Intel i5");
 
-// includo classe netbook
-include_once __DIR__ . '/classes/bicycle.class.php';
+// istanze ruote
+$mavic = new Wheel(500, "Mavic Ksyrium", 28);
+$fulcrum = new Wheel(300, "Fulcrum", 29);
+
+// istanze biciclette
+$pinarello = new Bicycle(10000, "Pinarello Dogma", 54, "Corsa", $mavic);
+$giant = new Bicycle(2500, "Giant", 56, "MTB", $fulcrum);
+
 
 // arrays
 $notebooks = [
@@ -40,6 +58,7 @@ $bicycles = [
   $giant,
 ];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -101,7 +120,10 @@ $bicycles = [
               Tipologia: <?php echo $bicycle->getTypo() . " pollici"; ?>
             </li>
             <li>
-              Misura ruote: <?php echo $bicycle->getWheelSize(); ?>
+              Misura ruote: <?php echo $bicycle->getWheel()->getWheelSize(); ?>
+            </li>
+            <li>
+              Modello ruote: <?php echo $bicycle->getWheel()->getName(); ?>
             </li>
           </ul>
         <?php } ?>

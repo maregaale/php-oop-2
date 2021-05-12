@@ -5,16 +5,17 @@ class Bicycle extends Product {
   // proprietà
   protected $size;
   protected $typo;
-  protected $wheelSize;
+  protected $wheel;
 
-	  // costrutto
-  public function __construct($_price, $_name, $_size, $_typo, $_wheelSize) {
+
+	// costrutto
+  public function __construct($_price, $_name, $_size, $_typo, $_wheel) {
 
     parent::__construct($_price, $_name);
 
     $this->size = $_size;
     $this->typo = $_typo;
-    $this->wheelSize = $_wheelSize;
+    $this->wheel = $_wheel;
   }
 
   // metodi
@@ -26,12 +27,9 @@ class Bicycle extends Product {
 		return $this->typo;
 	}
 
-	public function getWheelSize() {
-		return $this->wheelSize;
+	public function getWheel() {
+		return $this->wheel;
 	}
 }
 
-// istanze biciclette
-$pinarello = new Bicycle(10000, "Pinarello Dogma", 54, "Corsa", 28);
-$giant = new Bicycle(2500, "Giant", 56, "MTB", 29);
 ?>
