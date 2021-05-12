@@ -39,7 +39,6 @@ $bicycles = [
   $pinarello,
   $giant,
 ];
-
 ?>
 
 <!DOCTYPE html>
@@ -53,8 +52,9 @@ $bicycles = [
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
+    <!-- titolo -->
     <h1>Prodotti e-commerce</h1>
+    <!-- /titolo -->
 
     <div class="container">
       <!-- stampa modelli netbook -->
@@ -108,7 +108,5 @@ $bicycles = [
       </div>
       <!-- /stampa modelli Biciclette -->
     </div>
-
-    
   </body>
 </html>
