@@ -23,82 +23,11 @@ class Product {
 
 }
 
-// classe netbook
-class Netbook extends Product {
-  // proprietà
-  protected $displaySize;
-  protected $ram;
-  protected $operatingSystem;
-  protected $processor;
+// includo classe netbook
+include_once __DIR__ . '/classes/netbook.class.php';
 
-	  // costrutto
-  public function __construct($_price, $_name, $_displaySize, $_ram, $_operatingSystem, $_processor) {
-
-    parent::__construct($_price, $_name);
-
-    $this->displaySize = $_displaySize;
-    $this->ram = $_ram;
-    $this->operatingSystem = $_operatingSystem;
-    $this->processor = $_processor;
-  }
-
-  // metodi
-  public function getDisplaySize() {
-		return $this->displaySize;
-	}
-
-	public function getRam() {
-		return $this->ram;
-	}
-
-	public function getOperatingSystem() {
-		return $this->operatingSystem;
-	}
-
-	public function getProcessor() {
-		return $this->processor;
-	}
-
-}
-
-// classe bicicletta
-class Bicycle extends Product {
-  // proprietà
-  protected $size;
-  protected $typo;
-  protected $wheelSize;
-
-	  // costrutto
-  public function __construct($_price, $_name, $_size, $_typo, $_wheelSize) {
-
-    parent::__construct($_price, $_name);
-
-    $this->size = $_size;
-    $this->typo = $_typo;
-    $this->wheelSize = $_wheelSize;
-  }
-
-  // metodi
-  public function getSize() {
-		return $this->size;
-	}
-
-	public function getTypo() {
-		return $this->typo;
-	}
-
-	public function getWheelSize() {
-		return $this->wheelSize;
-	}
-}
-
-// istanze nebbook
-$msiPrestige = new Netbook(1300, "MSI Prestige 15", 15, "32GB", "Windows-10", "Intel i7");
-$hpPavillon = new Netbook(800, "HP Pavillon", 16, "8GB", "Windows-10", "Intel i5");
-
-// istanze nebbook
-$pinarello = new Bicycle(10000, "Pinarello Dogma", 54, "Corsa", 28);
-$giant = new Bicycle(2500, "Giant", 56, "MTB", 29);
+// includo classe netbook
+include_once __DIR__ . '/classes/bicycle.class.php';
 
 // arrays
 $notebooks = [
