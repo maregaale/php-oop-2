@@ -23,11 +23,13 @@ class Product {
   }
 
   // metodi
-  public function getPrice() {
+  public function getPrice(): float
+  {
 		return $this->price;
 	}
 
-	public function getName() {
+	public function getName(): string
+  {
 		return $this->name;
 	}
 
@@ -87,7 +89,7 @@ $bicycles = [
           <p>Proprietà:</p>
           <ul>
             <li>
-              Prezzo: <?php echo $notebook->getPrice(); ?>
+              Prezzo: <?php echo $notebook->getPrice() . " €"; ?>
             </li>
             <li>
               Schermo: <?php echo $notebook->getDisplaySize() . " pollici"; ?>
@@ -114,13 +116,13 @@ $bicycles = [
           <p>Proprietà:</p>
           <ul>
             <li>
-              Prezzo: <?php echo $bicycle->getPrice(); ?>
+              Prezzo: <?php echo $bicycle->getPrice() . " €"; ?>
             </li>
             <li>
-              Tipologia: <?php echo $bicycle->getTypo() . " pollici"; ?>
+              Tipologia: <?php echo $bicycle->getTypo(); ?>
             </li>
             <li>
-              Misura ruote: <?php echo $bicycle->getWheel()->getWheelSize(); ?>
+              Misura ruote: <?php echo $bicycle->getWheel()->getWheelSize() . " pollici"; ?>
             </li>
             <li>
               Modello ruote: <?php echo $bicycle->getWheel()->getName(); ?>

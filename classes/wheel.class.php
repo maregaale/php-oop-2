@@ -14,7 +14,8 @@ class Wheel extends Product {
   }
 
   // metodi
-	public function getWheelSize() {
+	public function getWheelSize(): int
+  {
 		return $this->wheelSize;
 	}
 }

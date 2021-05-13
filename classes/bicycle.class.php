@@ -19,11 +19,13 @@ class Bicycle extends Product {
   }
 
   // metodi
-  public function getSize() {
+  public function getSize(): int
+  {
 		return $this->size;
 	}
 
-	public function getTypo() {
+	public function getTypo(): string
+  {
 		return $this->typo;
 	}
 
