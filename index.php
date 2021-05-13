@@ -1,4 +1,6 @@
 <?php
+// includo classe prodotto
+include_once __DIR__ . '/classes/product.class.php';
 
 // includo classe netbook
 include_once __DIR__ . '/classes/netbook.class.php';
@@ -10,30 +12,6 @@ include_once __DIR__ . '/classes/wheel.class.php';
 include_once __DIR__ . '/classes/bicycle.class.php';
 
 
-// classe prodotto
-class Product {
-  // proprietà
-  protected $price;
-  protected $name;
-
-  // costrutto
-  public function __construct($_price, $_name) {
-    $this->price = $_price;
-    $this->name = $_name;
-  }
-
-  // metodi
-  public function getPrice(): float
-  {
-		return $this->price;
-	}
-
-	public function getName(): string
-  {
-		return $this->name;
-	}
-
-}
 
 // ISTANZE
 // istanze netbook
